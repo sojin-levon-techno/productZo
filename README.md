@@ -1,68 +1,56 @@
-:
+# 🛒 **ProductZo**
 
-🛒 ProductZo
-A modern Flutter app built with Bloc, HTTP, and a clean MVVM architecture to display and manage products.
+A modern **Flutter app** built with **Bloc**, **HTTP**, and a clean **MVVM** architecture to **display and manage products**.
 
-🚀 Features
-✅ Fetch & Display Products
+---
 
-Retrieves product data from DummyJSON API
+## 🚀 **Features**
 
-Beautiful grid UI with images, title, price, and description
+**✅ Fetch & Display Products**  
+- Retrieves product data from the [DummyJSON API](https://dummyjson.com/products)  
+- Beautiful grid UI with images, title, price, and description
 
-✅ View Product Details
+**✅ View Product Details**  
+- Users can view individual product details with clear, structured information
 
-Users can view individual product details with clear, structured information
+**✅ Edit Products**  
+- Users can edit product information through a validated form  
+- Form uses `TextEditingController` with real-time validation
 
-✅ Edit Products
+**✅ State Management with Bloc**  
+- Cleanly separates business logic with `flutter_bloc`  
+- Scalable and maintainable structure
 
-Users can edit product information through a validated form
+**✅ MVVM Architecture**  
+- Follows best practices with **Model–View–ViewModel**  
+- Keeps UI, state, and business logic well-organized
 
-Form uses TextEditingController with real-time validation
+---
 
-✅ State Management with Bloc
+## ⚙️ **Dependencies**
 
-Cleanly separates business logic with flutter_bloc
+- **`flutter_bloc`** – Predictable state management
+- **`http`** – REST API calls
+- **Flutter SDK** – Stable channel
 
-Scalable and maintainable structure
+---
 
-✅ MVVM Architecture
+## 🔗 **API**
 
-Follows best practices with Model–View–ViewModel
+- **Base URL:** [`https://dummyjson.com/products`](https://dummyjson.com/products)
 
-Keeps UI, state, and business logic well-organized
+> **Note:** The DummyJSON API does **not persist edits on the server**.  
+> Edited product data will show locally, but the API does not store them permanently.  
+> This is a known API limitation.
 
-⚙️ Dependencies
-flutter_bloc – predictable state management
+---
 
-http – REST API calls
+## 📝 **Known Issues**
 
-Flutter SDK – stable channel
+⚠️ **Editing Not Persisted** 
 
-🔗 API
-Base URL: https://dummyjson.com/products
+The DummyJSON API is for demonstration only – it does **not** save changes on the backend.  
+Your edits will show in the app but re-fetching will reset them.
 
-Note: The DummyJSON API does not persist edits on the server. You will see updated responses locally, but the API does not store them permanently.
-
-This is a known API limitation.
-
-📂 Project Structure
-bash
-Copy
-Edit
-lib/
- ├── core/           # App-level colors, constants, extensions
- ├── features/
- │   └── products/
- │        ├── models/   # Product data models
- │        ├── views/    # UI screens & widgets
- │        ├── viewmodel/# MVVM logic
- │        └── bloc/     # Bloc states, events, and bloc classes
- ├── main.dart      # Entry point
-✨ Screenshots
-Add your UI screenshots here — grid view, product details, edit form, etc.
-
-📝 Known Issues
-⚠️ Editing Not Persisted
-The DummyJSON API is for testing only — it does not save changes. Edited product data will show locally, but re-fetching resets it. This is expected behavior from the API side.
+---
 
